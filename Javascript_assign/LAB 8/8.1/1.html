@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>
+Working with form object
+</title>
+<style>
+
+input{width:60px;
+border-left: 2px solid #ccc;
+border-top: 1px solid #ccc;
+}
+input:focus{outline:none;}
+.button{width:90px;}
+</style>
+
+    <script>
+        function comp() {
+            p = Number(document.getElementById("p").value);
+            t = Number(document.getElementById("t").value);
+            r = Number(document.getElementById("r").value);
+
+            if (p > 1500000)
+                alert("Loan amount exceeds 15 lakh")
+            else if (t < 7 | t > 15)
+                alert("between 7 and 15 yrs only")
+            else {
+                si = ((p * t * r) / 100);
+                document.getElementById("i").value = si;
+                document.getElementById("tp").value = (si + p);
+                document.getElementById("m").value = (si + p) / 12;
+            }
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <br>
+    <table align="center" style=" border-style: solid blue 2px">
+        <tr>
+            <td>
+                <h3>
+                    Enter Loan Information:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1) Amount of the loan (any currency):
+            </td>
+            <td>
+                <input type="text" id="p" autofocus>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2) Annual percentage rate of interest:
+            </td>
+            <td>
+                <input type="text" id="r">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3) Repayment period in years :
+            </td>
+            <td>
+                <input type="text" id="t">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="button" type="button" value="Compute" onclick="comp()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Payment Information
+                </h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4)Your monthly payment will be :
+            </td>
+            <td>
+                <input type="number" id="m" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                5) Your total payment will be :
+            </td>
+            <td>
+                <input type="number" id="tp" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6) your total interest payment will be :
+            </td>
+            <td>
+                <input type="number" id="i" readonly>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+<html>
+<head>
+<script>
+today=new Date();
+document.write(""+today);
+var time=today.getHours();
+document.write("<br>");
+if (time<12) 
+      {
+      document.write("Good morning");
+      }
+    if (time>=12 && time<17) 
+      {
+      document.write("Good afternoon");
+      }
+    if (time>=17) 
+      {
+      document.write("Good evening");
+      }
+</script>
+</head>
+</html>

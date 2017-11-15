@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Basic Form Validation</title>    
+<style>
+section{
+border: 3px solid black;
+width: 350px;
+height: 230px;
+padding: 5px;
+}
+body{
+font-family:"Impact,Charcoal,sans-serif";
+}
+.sub{
+float:left;
+}
+.pre{
+float:right;
+margin-right:100px;
+}
+
+</style>
+
+</head>
+<body><center><section>
+    <form name="form" method=post>
+    <table align="center">
+        <thead>
+            <tr>
+                <th colspan="2">
+                   
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" name="txtName" id="txtName" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of Birth:
+                </td>
+                <td>
+                    <input type="date" value="" id="DoB" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone Number:
+                </td>
+                <td>
+                    <input type=text name="phNo" id="phNo" required  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="text" name="eMail" id="eMail" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Graduation Level:
+                </td>
+                <td>
+                    <input type="radio" name="rdgrad" id="rdUG" value="UG" onchange="QualSelect('ug',this.form.ddlQual)"  />U.G
+                    <input type="radio" name="rdgrad" id="rdPG" value="PG" onchange="QualSelect('pg',this.form.ddlQual)"  />P.G
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label>
+                    Qualification:
+                </label>
+                </td>
+                <td>
+                    <select name="ddlQual" size="1">
+                    <option value = "-1" >Select your qualification</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" ><br>
+                    <input class="sub" type="button" value="Submit"  onclick="ValidateForm(this.form)" autofocus/>
+               
+                    <input class="pre" type="button" value="Preview" onclick="showPreview(this.form)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+</section>
+</center>
+</body>
+</html>
+
+<script type="text/javascript" src="Lab.9.2.js"></script>

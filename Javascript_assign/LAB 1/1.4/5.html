@@ -1,0 +1,49 @@
+<html>
+<head><title>Embedding Script tag in HTML Document</title>
+
+<style>
+.border{
+border-bottom: 2px dotted black;
+width: 200px;
+}
+.left{float:left;}
+
+</style>
+
+<script>
+var a=10;
+
+</script>
+
+<p> Script embedded in Head Tag</p>
+<div class="border"> </div>
+<p>Value stored in varible  <i><code> headVar is</code></i> <b> 10</b> </p>
+
+<hr>
+</head>
+<body>
+<script>
+
+var b=65;
+
+</script>
+<p> Script embedded in Body Tag</p>
+<div class="border"> </div>
+<p>Value stored in varible  <i><code> bodyVar is</code></i> <b> 65</b> </p>
+
+<hr>
+
+<p><code>The actual script is in external script file called "common.js"</code></p>
+
+<script>
+var p=a+b;
+
+document.write("<p> The sum of the variables <code>headVar</code> and <code>bodyVar</code> is</p> " +p);
+
+
+
+</script>
+<br>
+<hr>
+</body>
+</html>

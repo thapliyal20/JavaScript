@@ -1,0 +1,127 @@
+<html>
+<title>Working with documents</title>
+<style>
+table{
+border: 1px solid #FFF;
+}
+tr{font-weight:bold;}
+h3{margin: 0px;
+padding: 0px;}
+</style>
+
+<script>
+    function invoice() {
+        var a = document.getElementById("t1").value;
+        var b = document.getElementById("t2").value;
+        var c = document.getElementById("t3").value;
+        var d = document.getElementById("t4").value;
+
+
+        if (a == 0 && b == 0 && c == 0 && d == 0) {
+            alert("No Item Selected");
+        }
+        else {
+            var mywindow = window.open(' ', 'INVOICE, height= 500 , width=500,scrollbars=yes');
+            //mywindow.document.write("<h3 align="center">INVOICE</h3>");
+            mywindow.document.write("<h3>INVOICE</h3> "+"<table> <tr><td> PRODUCT </td><td> Quantity </td><td> price </td><td>Total</td></tr>");
+            if (a != 0) 
+            { mywindow.document.write("<tr><td> Barbie Doll </td><td>" + a + "</td><td>" + 20 + "</td><td>" + a * 20 + " </td></tr>"); 
+
+	}
+            if (b != 0)
+            { mywindow.document.write("<tr><td> calculator </td><td>" + b + " </td><td>" + b * 30 + "</td></tr>"); }
+            if (c != 0)
+            { mywindow.document.write("<tr><td> Mobile <br>phone</td><td>" + c + "</td><td>" + c * 40 + "</td></tr>"); }
+            if (d != 0) {
+            mywindow.document.write("<tr><td> LG DVD </td><td>" + d + "</td><td> " + d * 50 + " </td></tr></table>");
+            }
+        }
+    }	
+</script>
+<body bgcolor="cyan">
+    <h1>
+        PRODUCTS
+    </h1>
+    <form>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>
+                <h3>Name</h3>
+            </th>
+            <th>
+               <h3> Description</h3>
+            </th>
+            <th>
+               <h3> Price</h3>
+            </th>
+            <th>
+                <h3>Qty</h3>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Barbie Doll
+            </td>
+            <td>
+                Beautiful
+            </td>
+            <td>
+                20
+            </td>
+            <td>
+                <input type="text" value="" name="t1" id="t1" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                calculator
+            </td>
+            <td>
+                Calculator with latest features
+            </td>
+            <td>
+                30
+            </td>
+            <td>
+                <input type="text" value="" name="t2" id="t2" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mobile
+                <br>
+                phone
+            </td>
+            <td>
+                Camera,java
+                <br>
+                games,Gprs
+            </td>
+            <td>
+                40
+            </td>
+            <td>
+                <input type="text" value="" name="t3" id="t3" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                LG DVD
+            </td>
+            <td>
+                5 disc changer
+            </td>
+            <td>
+                50
+            </td>
+            <td>
+                <input type="text" value="" name="t4" id="t4" />
+            </td>
+        </tr>
+          
+          
+        </tr>
+    </table>      <input type="submit" value="ORDER" name="Order" onclick="invoice()" />
+    </form>
+</body>
+</html>

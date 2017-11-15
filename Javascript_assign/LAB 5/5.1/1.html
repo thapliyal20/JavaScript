@@ -1,0 +1,83 @@
+
+<html>
+<head>
+    <title>window example </title>
+<style>
+.font{font-family: sans-serif;}
+.font1{font-family: sans-serif; font-weight:normal; font-size: 15px;}
+</style>
+
+</head>
+<script language="javascript">
+    function newWindow() {
+        var a = document.getElementById("t1").value;
+        var b = document.getElementById("t2").value;
+        var c = document.getElementById("t3").value;
+        var d = document.getElementById("t4").value;
+        var mywindow;
+        mywindow = window.open("", "", "_blank").document.write("This window is opened on clicking of the <b>New Window</b> button");
+        mywindow.moveTo(c, d);
+        mywindow.resizeBy(a, b);
+
+    }
+</script>
+<body>
+    <form id="frmlab">
+    <table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+        <tr>
+            <th colspan="4" class="font">
+                Create a new window
+            </th>
+        </tr>
+        <tr>
+            <th colspan="4" class="font1">
+                Winodw Size
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Width:
+            </td>
+            <td>
+                <input type="number" name="width" value="width" id="t1" />
+            </td>
+            <td>
+                Height:
+            </td>
+            <td>
+                <input type="number" name="height" value="Height" id="t2" />
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4" class="font1">
+                POSITION
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Left:
+            </td>
+            <td>
+                <input type="number" name="Left" value="Left" id="t3" />
+            </td>
+            <td>
+                Top:
+            </td>
+            <td>
+                <input type="number" name="Top" value="Top" id="t4" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <center>
+                    <input type="button" name="nWindow" value="New Window" onclick="newWindow()" /></center>
+            </td>
+            <td>
+                <center>
+                    <input type="reset" name="reset" value="Reset" /></center>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

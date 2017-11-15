@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<style>
+.border{
+border-bottom: 3px dotted black;
+margin-bottom:5px;
+padding: 0px;
+width: 160px;
+}
+
+p{
+font-size:22px;
+}
+body{font-size: 20px;}
+</style>
+</head>
+<body>
+    <p id="demo"></p>
+    <p>List of Employees</p>
+     <div class="border"></div>    
+    <script language="javascript">
+        var employees = ["Tove", "Hege", "Stale", "Kai Jim", "Borge", "undefined"];
+
+        employees.toString();
+        for (i = 0; i < 6; i++) 
+        {
+            document.write(i + 1 + "." +" " + employees[i] + "<br>");
+            //document.getElementById("demo").innerHTML = employees;
+        }
+    </script>
+</body>
+</html>

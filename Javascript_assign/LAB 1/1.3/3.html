@@ -1,0 +1,34 @@
+<html>
+<head><title>Using External Script file in HTML Document</title>
+</head>
+<style>
+p{
+display: inline-block;
+}
+.me{
+font-weight: bolder;
+font-family: Consolas,monospace;
+}
+</style>
+<script src="HelloWorld.js">
+</script>
+
+<body>
+<hr>
+<p>The actual script is in external script file called "HelloWorld.js"</p> <br>
+
+<p> This text is displayed by calling external function: </p>
+
+<p class="me" id="msg"> </p>
+
+<script type="text/javascript">
+
+document.getElementById('msg').innerHTML = sayHello();
+
+</script>
+
+
+
+<hr>
+</body>
+</html>
